@@ -69,3 +69,35 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+---------------------------------------------------
+
+Describe: omitOffensiveWords()
+
+Test: "It should return undefined when the text is an empty string."
+Code:
+const text = ""
+const word = "zoinks";
+omitOffensiveWords(words, text);
+Expected output: undefined
+
+Test: "It should record if an offensive word is in the text"
+Code:
+const text = "zoinks";
+const words = "offensiveWords";
+omitOffensiveWords(words, text);
+expected output: 1
+
+Test: "It should return the amount of offensive words in the text when we have more than one offensive word"
+Code:
+const text = "hi how are you zoinks zoinks ZOINKS are you a muppeteer";
+const word = offensiveWords;
+omitOffensiveWords(words, text);
+expected output: 4
+
+Test: "It should remove offensive words from our text."
+Code:
+const text: "hi how loopdaloop you Zoinks zoinks ZOINKS are you a muppeteer";
+const word: offensiveWords
+omitOffensiveWords(words, text);
+expected output: "hi how you are you a"
